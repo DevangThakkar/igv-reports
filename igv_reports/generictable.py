@@ -105,5 +105,3 @@ class _Feature:
         self.chr = chr
         self.start = start
         self.end = end
-
-

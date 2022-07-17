@@ -27,7 +27,10 @@ class BamReader:
 
     # add sam flag for unit tests
     def slice(self, region=None, reference=None, region2=None, split_bool=False, sam=False):
-        args = ["-b", "-h", self.filename]
+        if sam:
+            args = ["-h", self.filename]
+        else:
+            args = ["-b", "-h", self.filename]
         if self.fasta:
             args.append("-T" + self.fasta)
         if region:

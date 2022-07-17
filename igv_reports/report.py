@@ -162,7 +162,6 @@ def create_report(args):
                 if not args.split:
                     data = reader.slice(region)
                 else:
-                    print(reader)
                     data = reader.slice(region, region2=region2, split_bool=args.split)
                 trackobj["url"] = datauri.get_data_uri(data)
                 track_objects.append(trackobj)
